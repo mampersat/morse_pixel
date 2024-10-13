@@ -51,7 +51,7 @@ def handle_button_pin_change(pin):
         np[0] = (255, 0, 0)
         np.write()
         client.publish(MQTT_TOPIC, b"pressed")
-        print("Snet: pressed")
+        print("Sent: pressed")
 
     else:
         np[0] = (0, 0, 0)
@@ -74,4 +74,4 @@ def main():
         # Blocking wait for message
         client.wait_msg()
 
-main()            
+main()
