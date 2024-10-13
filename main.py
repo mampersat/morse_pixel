@@ -3,9 +3,9 @@ from umqtt.simple import MQTTClient
 import ubinascii
 import machine
 import neopixel
-import time
 import utime
 
+import wifi
 
 # Global variables (don't judge me)
 client = None
@@ -19,6 +19,7 @@ button_pin_gpio = 27
 BROKER = "broker.hivemq.com"
 CLIENT_ID = ubinascii.hexlify(machine.unique_id())
 MQTT_TOPIC = b"com/mampersat/morsepixel"
+CONTROLLED_PIXEL = 0
 
 # Initialize the pin and NeoPixel
 button_pin = machine.Pin(button_pin_gpio, machine.Pin.IN, machine.Pin.PULL_UP)
