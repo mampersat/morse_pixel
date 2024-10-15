@@ -1,7 +1,7 @@
 import network
 import time
 
-time.sleep(1)
+time.sleep(1) # Give the device a hot second to be ready for wifi
 
 sta_if = network.WLAN(network.STA_IF)
 sta_if.active(True)

@@ -19,15 +19,15 @@ button_pin_gpio = 27
 
 # MQTT Server Parameters
 BROKER = "broker.hivemq.com"
-CLIENT_ID = ubinascii.hexlify(machine.unique_id())
+CLIENT_ID = "com/mampersat/proto_board" # ubinascii.hexlify(machine.unique_id())
 MQTT_TOPIC = b"com/mampersat/morsepixel"
 
 # The unique name of the pixel we are controlling
-CONTROLLED_PIXEL = "J-38" # the number on the morse code key device
+CONTROLLED_PIXEL = "eilly" # the number on the morse code key device
 LOCAL_COLOR = (10, 20, 30) # the color of the pixel when the button is pressed locally, a light blue
 
 # The list of pixels we want to display
-PIXELS = [CONTROLLED_PIXEL, "eilly"] # map pixels to neopixel locations starting at position 1
+PIXELS = [CONTROLLED_PIXEL, "J-38"] # map pixels to neopixel locations starting at position 1
 
 # Initialize the pin and NeoPixel
 button_pin = machine.Pin(button_pin_gpio, machine.Pin.IN, machine.Pin.PULL_UP)
